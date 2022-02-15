@@ -20,7 +20,7 @@ public class Department {
     @JsonIgnoreProperties({"department"})
     @OneToMany(mappedBy = "department")
     // be able to add multiple employees
-    private List<Employee> employees;   // ORM
+    private List<Employee> employees;   // ORM - for hibernate we need to use List, ORM is reqring using List
 
     public Department(String name) {
         this.name = name;

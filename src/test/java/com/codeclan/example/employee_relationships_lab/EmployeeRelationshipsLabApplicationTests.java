@@ -38,13 +38,22 @@ class EmployeeRelationshipsLabApplicationTests {
 		Employee employee2 = new Employee("Rachel", "Higgins", 822635, department1);
 		employeeRepository.save(employee2);
 
+		Employee employee3 = new Employee("Robert", "Chance", 765546, department1);
+		employeeRepository.save(employee3);
+
 		Project project1 = new Project("Java stock app", 23);
-		// projectRepository.save(project1);
+
+		Project project2 = new Project("Python weather app", 18);
 
 		project1.addEmployee(employee1);
 		project1.addEmployee(employee2);
 
 		projectRepository.save(project1);
+
+		project2.addEmployee(employee2);
+		project2.addEmployee(employee3);
+
+		projectRepository.save(project2);
 
 	}
 
